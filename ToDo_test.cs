@@ -17,6 +17,12 @@ namespace Project_ToDo
             {
                 Console.WriteLine(myReader.GetInt32(0) + ") " + myReader.GetDateTime(1) + " " + myReader.GetString(2) + "- " + myReader.GetString(3) + " ");
             }
+            DateTime Time = DateTime.Now;
+            Console.Write("Hello, please enter your name!" + /n);
+            string name = Console.ReadLine()
+            Console.WriteLine(name + ", do you want to add some plans for today? (Y,N)")
+            Console.ReadLine()//дописать логику
+            Console.WriteLine("Do you have plans for some other day? If yes, please, enter the date you need, if no, enter 'N'")
         }
     }
 }
