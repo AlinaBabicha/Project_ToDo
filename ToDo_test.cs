@@ -11,6 +11,12 @@ namespace Project_ToDo
             connection.Open();
             Console.WriteLine("Coonection with the server is established");
 
+            var command = new MySqlCommand("SELECT * FROM TODO_TEST", connection);
+            var myReader = command.ExecuteReader();
+            while (myReader.Read())
+            {
+                Console.WriteLine(myReader.GetInt32(0) + ") " + myReader.GetDateTime(1) + " " + myReader.GetString(2) + "- " + myReader.GetString(3) + " ");
+            }
         }
     }
 }
